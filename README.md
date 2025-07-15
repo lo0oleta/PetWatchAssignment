@@ -152,10 +152,6 @@ After successful payment, users receive:
 
 This project is part of the PetWatch assignment and is for educational/demonstration purposes.
 
-## 📞 Support
 
-For any questions or issues, please contact the development team.
-
----
 
 
