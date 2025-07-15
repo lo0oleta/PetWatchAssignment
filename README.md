@@ -17,7 +17,7 @@ Watch a demo video of the app here: [PetWatch Demo](https://drive.google.com/fil
 
 ### Payment Options
 - 💳 Credit Card payment with form validation
-- 🍎 Apple Pay integration
+-  Apple Pay integration
 - Secure transaction processing
 
 ### User Experience
@@ -38,7 +38,7 @@ Watch a demo video of the app here: [PetWatch Demo](https://drive.google.com/fil
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/lo0oleta/PetWatchAssignment.git
    cd PetWatchAssignment
    ```
 
@@ -158,4 +158,4 @@ For any questions or issues, please contact the development team.
 
 ---
 
-Made with ❤️ for pet adoption
+
