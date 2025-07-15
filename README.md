@@ -1,97 +1,161 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# PetWatch - Pet Adoption App
 
-# Getting Started
+A React Native mobile application for pet adoption with secure payment processing and beautiful animations.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 🎥 Demo Video
 
-## Step 1: Start Metro
+Watch a demo video of the app here: [PetWatch Demo](https://drive.google.com/file/d/15QMbwoTLZo958j9qDnD9w5T_Cfer2ooQ/view?usp=sharing)
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 🐾 Features
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### Core Features
+- **Pet Listing**: Browse available pets for adoption
+- **Pet Details**: View detailed information about each pet including breed, age, and description
+- **Location Services**: Find pets near your location
+- **Secure Payment**: Complete adoption process with multiple payment options
+- **Payment Success**: Beautiful success screen with confetti animation
 
-```sh
-# Using npm
-npm start
+### Payment Options
+- 💳 Credit Card payment with form validation
+- 🍎 Apple Pay integration
+- Secure transaction processing
 
-# OR using Yarn
-yarn start
+### User Experience
+- **Beautiful UI**: Modern, clean design with smooth animations
+- **Interactive Elements**: Confetti animations on successful payments
+- **Step-by-step Guidance**: Clear instructions for pickup/delivery
+- **Responsive Design**: Optimized for both iOS and Android
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js >= 18
+- React Native CLI
+- Xcode (for iOS development)
+- Android Studio (for Android development)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd PetWatchAssignment
+   ```
+
+2. **Install dependencies**
+   ```bash
+   bun install
+   ```
+
+3. **iOS Setup**
+   ```bash
+   cd ios && pod install && cd ..
+   ```
+
+4. **Start Metro**
+   ```bash
+   bun start
+   ```
+
+5. **Run the app**
+   ```bash
+   # For iOS
+   bun run ios
+   
+   # For Android
+   bun run android
+   ```
+
+## 📱 App Structure
+
+```
+src/
+├── components/
+│   └── PetCard.tsx          # Pet listing card component
+├── screens/
+│   ├── PetListScreen.tsx    # Main pet listing screen
+│   ├── PetDetailScreen.tsx  # Pet detail view
+│   ├── PaymentScreen.tsx    # Payment form and processing
+│   ├── PaymentSuccessScreen.tsx # Success screen with animations
+│   └── LocationScreen.tsx   # Location services
+├── navigation/
+│   └── AppNavigator.tsx     # Navigation configuration
+└── data/
+    └── pets.json           # Pet data
 ```
 
-## Step 2: Build and run your app
+## 🎨 Key Screens
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+### 1. Pet Listing Screen
+- Browse all available pets
+- Clean card-based layout
+- Navigate to pet details
 
-### Android
+### 2. Pet Detail Screen
+- Detailed pet information
+- High-quality pet photos
+- Adopt button to start payment process
 
-```sh
-# Using npm
-npm run android
+### 3. Payment Screen
+- Contact information form
+- Payment method selection (Credit Card / Apple Pay)
+- Form validation and error handling
+- Secure payment processing
 
-# OR using Yarn
-yarn android
-```
+### 4. Payment Success Screen
+- Animated confetti celebration
+- Transaction details display
+- Step-by-step pickup/delivery instructions
+- Clear next steps for pet adoption
 
-### iOS
+## 🔧 Technical Stack
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+- **Framework**: React Native 0.80.1
+- **Navigation**: React Navigation 7.x
+- **State Management**: React Hooks
+- **Animations**: React Native Animated API
+- **Payment Processing**: Simulated secure payment flow
+- **Package Manager**: Bun (as per user requirements)
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+## 🎯 Payment Flow
 
-```sh
-bundle install
-```
+1. **Pet Selection**: User browses and selects a pet
+2. **Payment Form**: Complete contact and payment information
+3. **Payment Processing**: Secure transaction processing
+4. **Success Screen**: Animated celebration with next steps
+5. **Pickup/Delivery**: Clear instructions for getting the pet
 
-Then, and every time you update your native dependencies, run:
+## 📋 Next Steps Instructions
 
-```sh
-bundle exec pod install
-```
+After successful payment, users receive:
+1. **Confirmation Call**: Within 24 hours
+2. **Pickup/Delivery Options**:
+   - 📍 Pickup at Dubai Marina Mall
+   - 🚚 Delivery service (AED 50 fee)
+3. **Preparation Guidelines**: ID requirements and pet preparation tips
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+## 🛠️ Development
 
-```sh
-# Using npm
-npm run ios
+### Project Structure
+- Client-server architecture with clean API separation
+- Modular component design
+- Responsive and accessible UI
+- Comprehensive error handling
 
-# OR using Yarn
-yarn ios
-```
+### Code Quality
+- TypeScript for type safety
+- ESLint for code quality
+- Consistent coding standards
+- Proper component organization
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## 📄 License
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+This project is part of the PetWatch assignment and is for educational/demonstration purposes.
 
-## Step 3: Modify your app
+## 📞 Support
 
-Now that you have successfully run the app, let's make changes!
+For any questions or issues, please contact the development team.
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+---
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Made with ❤️ for pet adoption
